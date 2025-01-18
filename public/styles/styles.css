@@ -1,0 +1,118 @@
+header {
+    margin-bottom: 40px;
+}
+header div {
+    border-bottom: 4px solid orange;
+}
+header div img {
+    margin-top: 12px
+}
+
+.icon-caracol {
+    background-image: url('/images/icon-caracol.png');
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    margin-right: 4px;
+}
+
+.display-ul {
+    list-style: none;
+}
+
+.logo {
+    display: inline-block;
+    width: 300px; 
+    height: 130px;
+    margin-bottom: 24px;
+
+}
+
+
+.mainContainer {
+  display: block;
+  margin: 0 auto;
+  width: 900px;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+input, select {
+  margin-bottom: 10px!important;
+}
+
+select { 
+  display: block;
+  max-width: 740px;
+}
+
+.generalInput {
+  border-bottom: 1px solid black;
+  margin-bottom: 10px;
+}
+
+
+.displaynone {
+  display: none;
+}
+
+.display { 
+  display: block;
+}
+
+
+.button {
+  color: white;
+  background-color: rgba(251,75,2,1);
+  border: 1px solid white;
+  border-radius: 5px;
+  width: 80px;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+.button:hover {
+  background-color: white;
+  color: rgba(251,75,2,1);
+  border: 1px solid rgba(251,75,2,1);
+  transition: 0.2s ease-in;
+}
+
+
+.buttonContainer {
+  text-align: center;
+}
+
+.custom-btn {
+  margin-left: 80px
+}
+
+.displayContainer {
+  border: 1px solid black;
+  width: 1200px;
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+  overflow: auto;
+}
+
+.displayContainer li {
+  width: max-content;
+  padding-right: 30px;
+  border-bottom: 1px solid black;
+}
+
+.displayContainer li span{
+  color: black;
+}
+
+.displayContainer .tag {
+  width: 40px;
+  border-radius: 40px;
+  height: 10px;
+  display: inline-block;
+}
+
+.procesos {
+  text-align: center;
+}
