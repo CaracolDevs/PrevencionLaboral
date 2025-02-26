@@ -52,7 +52,7 @@
             </div>
             <p>Rutinario</p>
             <div class="column generalInput input_check">
-                <input required type="checkbox" name="rutinario" id="rutinario">
+                <input  type="checkbox" name="rutinario" id="rutinario">
             </div>
             <p>Tipo de Peligro</p>
             <div class="column generalInput input_select">
@@ -275,26 +275,20 @@
                 </select>
                 
             </div>
-            <p>Control de Operaciones</p>
-            <div class="column generalInput input_check">
-                <input required type="checkbox" name="controlesOperacionales" id="controlesOperacionales">
+            <p>Controles de Ingenieria</p>
+            <div class="column generalInput input_simple">
+                <input required type="text" name="cIngenieria" id="cIngenieria">
             </div>
-            <p>Controles de Operaciones</p>
-            <div class="column generalInput input_checkMulti">
-                <select required multiple name="controlesOperacionalesValues" id="controlesOperacionalesValues">
-                    <option value="01">NO TIENE</option>
-                    <option value="02">ELIMINACIÓN</option>
-                    <option value="03">SUSTITUCIÓN</option>
-                    <option value="04">CONTROLES DE INGENIERÍA</option>
-                    <option value="05">CONTROLES ADMINISTRATIVOS</option>
-                    <option value="06">EQUIPO DE PROTECCIÓN PERSONAL</option>
-                                                                    
-    
-    
-                </select>
+            <p>Controles Administrativos</p>
+            <div class="column generalInput input_simple">
+                <input required type="text" name="cAdministrativos" id="cAdministrativos">
+            </div>
+            <p>Equipo de Proteccion Personal</p>
+            <div class="column generalInput input_simple">
+                <input required type="text" name="cPPersonal" id="cPPersonal">
             </div>
             <p>Consecuencias</p>
-            <div class="column generalInput input_check">
+            <div class="column generalInput input_select">
                 
                 <select required name="consecuenciasResult" id="consecuenciasResult">
                     <option value="100">Catastróficas: Implica numerosas muertes o grandes daños con quebranto de la continuidad laboral ($xxxxxx).</option>
@@ -308,7 +302,7 @@
     
             </div>
             <p>Exposicion</p>
-            <div>
+            <div class="column generalInput input_select">
                 <select required name="exposicionResult" id="exposicionResult">
                     <option value="10">Continuamente: Ocurre todos los días, muchas veces al día.</option>
                     <option value="6">Frecuentemente: aproximadamente una o dos veces al día.</option>
@@ -320,7 +314,7 @@
                 
             </div>
             <p>Riesgo</p>
-            <div>
+            <div class="column generalInput input_select">
                 
                 <select required name="riesgoResult" id="riesgoResult">
                     <option value="10">Convicción: Es el resultado mas probable y esperado (OCURRENCIA MENSUAL O MENOS)</option>
@@ -332,11 +326,90 @@
                 </select>
             </div>
 
+            <p>Eliminación</p>
+            <div class="column generalInput input_simple">
+                <input  type="checkbox" name="eliminacion" id="eliminacion">
+            </div>
+            <p>Sustitución</p>
+            <div class="column generalInput input_simple">
+                <input  type="checkbox" name="sustitucion" id="sustitucion">
+            </div>
+
+            
+
+            <p>Acciones</p>
+            <div class="column generalInput input_simple">
+                <input required type="text" name="acciones" id="acciones">
+            </div>
+
+            <p>Responsable</p>
+            <div class="column generalInput input_simple">
+                <input required type="text" name="responsable" id="responsable">
+            </div>
+
+            <p>Fecha de Compromiso</p>
+            <div class="column generalInput input_simple">
+                <input required type="date" name="fechaCompromiso" id="fechaCompromiso">
+            </div>
+
+            <p>Estatus</p>
+            <div class="column generalInput input_select">
+                <select required    name="estatus" id="estatus">
+                <option value="En Proceso">En Proceso</option>
+                <option value="Retrasado">Retrasado</option>
+                <option value="Cerrado">Cerrado</option>
+
+                </select>
+            </div>
+
+
+            
+            <p>Re-Evalucion de Consecuencias</p>
+            <div class="column generalInput input_select">
+                
+                <select required name="reconsecuenciasResult" id="reconsecuenciasResult">
+                    <option value="100">Catastróficas: Implica numerosas muertes o grandes daños con quebranto de la continuidad laboral ($xxxxxx).</option>
+                    <option value="50">Varias muertes o daños materiales graves. (%xxxxx)</option>
+                    <option value="25">Una muerte. (%xxxx)</option>
+                    <option value="15">Lesiones muy graves, amputaciones, incapacidad permanente.($xxx)</option>
+                    <option value="5">Lesiones que generan incampacidad temporal o ausentismo. ($xx)</option>
+                    <option value="1">Heridas leves, contusiones, golpes, etc. Que, no generan incpacidad ni ausentismo. ($x)</option>
+                </select>
+                
+    
+            </div>
+            <p>Re-Evalucion de Exposicion</p>
+            <div class="column generalInput input_select">
+                <select required name="reexposicionResult" id="reexposicionResult">
+                    <option value="10">Continuamente: Ocurre todos los días, muchas veces al día.</option>
+                    <option value="6">Frecuentemente: aproximadamente una o dos veces al día.</option>
+                    <option value="3">Ocasionalmente: una vez a la semana o una vez al mes.</option>
+                    <option value="2">Inusual: de una vez al mes a una vez al año.</option>
+                    <option value="1">Raramente: puede o podría ocurrir cada ciertos años.</option>
+                    <option value="0.5">Remotamente: no ha ocurrido, pero no se descarta que ocurra en algún momento.</option>
+                </select>
+                
+            </div>
+            <p>Re-Evalucion de Riesgo</p>
+            <div class="column generalInput input_select">
+                
+                <select required name="reriesgoResult" id="reriesgoResult">
+                    <option value="10">Convicción: Es el resultado mas probable y esperado (OCURRENCIA MENSUAL O MENOS)</option>
+                    <option value="6">Es posible: Es completamente posible, nada extraño, tiene una probabilidad de 50% (HA OCURRIDO EN 6 MESES)</option>
+                    <option value="3">Sería una secuencia o coincidencia rara: 10% (HA OCURRIDO EN EL ÚLTIMO AÑO)</option>
+                    <option value="1">Sería una coincidencia remotamente posible. Se sabe que ha ocurrido. Probabilidad !% (OCURRENCIA EN 2 AÑOS)</option>
+                    <option value="0.5">Coincidencia extremadamente remota pero concebicle, se tiene referencia que haya ocurrido en muchos años de exposición. (OCURRENCIA EN 5 AÑOS)</option>
+                    <option value="0.1">Casi imposible: secuencia o consecuencia prácticamente imposible (NO HA OCURRIDO NUNCA)</option>
+                </select>
+            </div>
             <div class="buttonContainer">
                 <input class="button" type="submit" value="Enviar">
             </div>
         </form>
         </div>
+
+        
+
     </div>
     
         

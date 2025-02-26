@@ -15,26 +15,55 @@
         </div>
     </header>
     
+    <a  class="link" href="javascript:history.back()">Regresar</a>
     <div class="displayContainer">
         <ul class="display-ul">
             <% for(var i = 0; i < result.length; i++) { %>
-                <li ><span class="icon-caracol"></span><a class="a-list" href="/values/delete/<%= result[i].ProcesoId %>">Borrar</a>
-                    <span class="tag" 
-                    style="background-color:
-                <% if (result[i].Result < 20) { %> blueviolet <% } %>
-                <% if (result[i].Result >= 20 && result[i].Result < 70) { %> green <% } %>
-                <% if (result[i].Result >= 70 && result[i].Result < 200) { %> yellow <% } %>
-                <% if (result[i].Result >= 200 && result[i].Result < 400) { %> orange <% } %>
-                <% if (result[i].Result > 400) { %> red <% } %>
-                "
-                    ></span>
-                    <span> 
-                    | <%= result[i].Proceso %> | <%= result[i].Puestos %> | <%= result[i].Tarea %> | <%= result[i].Actividades %>
-                    | <%= result[i].Rutinario %> | <%= result[i].TipoPeligro %> | <%= result[i].Peligro %> | <%= result[i].Riesgo_Consecuencia %>
-                    | <%= result[i].Controles %> | <%= result[i].ControlesValores %> | <%= result[i].Consecuencias %> | <%= result[i].Exposicion %>
-                    | <%= result[i].Riesgo %> | <%= result[i].Result %> | <%= result[i].ResultText %>
+                <li >
                     
-                <span/>
+                    <p class="full">
+                        <span class="icon-caracol"></span><span class="tag" 
+                    style="background-color:
+                    <% if (result[i].Result < 20) { %> blueviolet <% } %>
+                    <% if (result[i].Result >= 20 && result[i].Result < 70) { %> green <% } %>
+                    <% if (result[i].Result >= 70 && result[i].Result < 200) { %> yellow <% } %>
+                    <% if (result[i].Result >= 200 && result[i].Result < 400) { %> orange <% } %>
+                    <% if (result[i].Result > 400) { %> red <% } %>
+                    "
+                ></span><br><a class="a-list" href="/values/delete/<%= result[i].ProcesoId %>">Borrar</a> | 
+                <a class="a-list" href="/values/edit/<%= result[i].ProcesoId %>">Editar</a>
+                    </p>
+                    
+                    <p> <b>Proceso: </b> <%= result[i].Proceso %></p>
+                    <p > <b>Puestos: </b> <%= result[i].Puestos %></p>
+                    <p> <b>Tarea: </b> <%= result[i].Tarea %></p>
+                    <p> <b>Actividades: </b> <%= result[i].Actividades %></p>
+                    <p> <b>Rutinario: </b> <%= result[i].Rutinario %></p>
+                    <p> <b>TipoPeligro</b> <%= result[i].TipoPeligro %></p>
+                    <p> <b>Peligro: </b> <%= result[i].Peligro %></p>
+                    <p class="full"> <b>Riesgo/Concecuencia: </b> <%= result[i].Riesgo_Consecuencia %></p>
+                    <p> <b> Eliminacion: </b> </b> <%= result[i].Eliminacion %></p>
+                    <p> <b>Sustitucion: </b> <%= result[i].Sustitucion %></p> 
+                    <p class="full"> <b>Controles de Ingenieria: </b> <%= result[i].CIngenieria %></p>
+                    <p class="full"> <b>Controles Administrativos: </b> <%= result[i].CAdministrativos %></p>
+                    <p class="full"> <b>Controles de Proteccion Personal: </b> <%= result[i].CPPersonal %></p>
+                    <p class="full"> <b>Concecencias: </b> <%= result[i].Consecuencias %></p>
+                    <p class="full"> <b>Exposicion: </b> <%= result[i].Exposicion %></p> 
+                    <p class="full"> <b>Riesgo: </b> <%= result[i].Riesgo %></p>
+                    <p class="full"> <b>Resultado: </b><%= result[i].ResultText %> - <%= result[i].Result %> </p>
+                    <p> <b>Acciones: </b> <%= result[i].Acciones %> </p>
+                    <p> <b>Responsable: </b> <%= result[i].Responsable %></p>
+                    <p> <b>Fecha de Compromiso: </b>  <%= result[i].FechaCompromiso %></p>
+                    <p> <b>Estatus: </b><%= result[i].Estatus %></p>
+                    <P class="full"> <B> Re-evaluacion</B></P>
+                    <p class="full"> <b>Consecuencias: </b> <%=result[i].RemakeConsecuencias %></p>
+                    <p class="full"> <b>Exposicion: </b> <%=result[i].Exposicion %></p>
+                    <p class="full"> <b>Riesgo: </b> <%= result[i].RemakeRiesgo %></p>
+                    <p class="full"> <b>Resultado: </b><%= result[i].RemakeResultText %> - <%= result[i].RemakeResult %> </p>
+
+
+                  
+
                 </li>
             <% } %>
         </ul>

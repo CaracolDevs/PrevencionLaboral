@@ -23,5 +23,15 @@ router.get(
     controller.delete
 )
 
+router.get(
+    '/edit/:id',
+    controller.edit
+)
+
+router.post(
+    '/edit/:id',
+    controller.editProcess
+)
+
 
 module.exports = router

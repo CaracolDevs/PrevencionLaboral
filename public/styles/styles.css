@@ -18,6 +18,22 @@ header div img {
 
 .display-ul {
     list-style: none;
+    
+}
+
+.display-ul li {
+  display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+.display-ul li p {
+  width: 50%;
+}
+
+.display-ul li .full {
+  width: 100%;
 }
 
 .logo {
@@ -97,7 +113,6 @@ select {
 }
 
 .displayContainer li {
-  width: max-content;
   padding-right: 30px;
   border-bottom: 1px solid black;
 }
@@ -115,4 +130,16 @@ select {
 
 .procesos {
   text-align: center;
+}
+
+.invi {
+  visibility: none;
+}
+
+
+.link {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 30px;
 }

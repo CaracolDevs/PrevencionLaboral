@@ -74,11 +74,24 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         type: DataTypes.DECIMAL(3,0),
     },
-    Controles: {
+    Eliminacion: {
         allowNull: false,
-        type: DataTypes.BOOLEAN,
+        type: DataTypes.BOOLEAN
     },
-    ControlesValores: {
+    Sustitucion: {
+        allowNull: false,
+        type: DataTypes.BOOLEAN
+    },
+    CIngenieria:{
+        allowNull: false,
+        type: DataTypes.STRING,
+
+    },
+    CAdministrativos: {
+        allowNull: false,
+        type: DataTypes.STRING,
+    },
+    CPPersonal: {
         allowNull: false,
         type: DataTypes.STRING,
     },
@@ -108,12 +121,61 @@ module.exports = (sequelize, DataTypes) => {
     } ,
     Result: {
         allowNull: false,
-        type: DataTypes.DECIMAL(10,0),
+        type: DataTypes.DECIMAL(5,0),
     },
-    ResultText : {
+    ResultText: {
         allowNull: false,
         type: DataTypes.STRING
-    }
+    },
+    Acciones: {
+        allowNull: false,
+        type: DataTypes.STRING
+    },
+    Responsable: {
+        allowNull: false,
+        type: DataTypes.STRING
+    },
+    FechaCompromiso: {
+        allowNull: false,
+        type: DataTypes.STRING
+    },
+    Estatus: {
+        allowNull: false,
+        type: DataTypes.STRING
+    },
+    RemakeConsecuencias: {
+        allowNull: false,
+        type: DataTypes.STRING,
+    },
+    RemakeConcecuenciasNumber: {
+        allowNull: false,
+        type: DataTypes.DECIMAL(3,0),
+    },
+    RemakeExposicion: {
+        allowNull: false,
+        type: DataTypes.STRING,
+    },
+    RemakeExposicionNumber: {
+        allowNull: false,
+        type: DataTypes.DECIMAL(3,0),
+    },
+    RemakeRiesgo: {
+        allowNull: false,
+        type: DataTypes.STRING,
+    },
+    RemakeRiesgoNumber: {
+        allowNull: false,
+        type: DataTypes.DECIMAL(3,0),
+    } ,
+    RemakeResult: {
+        allowNull: false,
+        type: DataTypes.DECIMAL(5,0),
+    },
+    RemakeResultText: {
+        allowNull: false,
+        type: DataTypes.STRING
+    },
+
   }, {
     sequelize,
     timestamps: false,
