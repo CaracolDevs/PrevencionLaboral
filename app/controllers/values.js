@@ -2005,6 +2005,8 @@ let riesgoConsecuencia = ''
     }); 
 
     await actual[0].save();
+
+    res.redirect('/values/get')
     
 
 }
